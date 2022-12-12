@@ -16,3 +16,16 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+$router->group(["prefix" => "api"], function () use ($router) {
+    //Identitas Siswa
+    $router->get('showIDSiswa', ['uses' => 'IdentitasSiswaController@showIdentitasSiswa']);
+    $router->post('createIDSiswa', ['uses' => 'IdentitasSiswaController@createIdentitasSis']);
+
+    //Kelas
+    $router->get('showKelas', ['uses' => 'KelasController@showKelas']);
+    $router->post('createKelas', ['uses' => 'KelasController@createKelas']);
+
+    //Siswa
+    $router->get('showSiswa', ['uses' => 'SiswaController@showSiswa']);
+    $router->post('createSiswa', ['uses' => 'SiswaController@createSiswa']);
+});
