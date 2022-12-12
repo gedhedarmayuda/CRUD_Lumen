@@ -14,11 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('kelas', function (Blueprint $table) {
-            $table->string('no_kelas');
-            $table->integer("kapasitas");
-            $table->integer("meja");
-            $table->integer("bangku");
-            $table->integer("papan_tulis");
+            $table->string('no_kelas')->nullable();
+            $table->integer("kapasitas")->nullable();
+            $table->integer("meja")->nullable();
+            $table->integer("bangku")->nullable();
+            $table->integer("papan_tulis")->nullable();
             $table->timestamps();
         });
     }
