@@ -13,14 +13,14 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('identitas_siswa', function (Blueprint $table) {
-            $table->string('id_siswa')->primary()->unique();
+            $table->increments('id_siswa');
             $table->string("nama_siswa");
             $table->string("alamat");
             $table->string("tempat_lahir");
             $table->string("tgl_lahir");
             $table->string("nama_wali");
             $table->string("jenis_kelamin");
-            $table->timestamp("create_at");
+            $table->timestamps();
         });
     }
 

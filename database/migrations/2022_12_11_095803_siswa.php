@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('siswa', function (Blueprint $table) {
-            $table->increments("no");
             $table->string("id_siswa")->references("id_siswa")->on("identitas_siswa");
             $table->integer("no_kelas")->references("no_kelas")->on("siswa");
+            $table->timestamps();
         });
     }
 

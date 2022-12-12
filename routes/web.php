@@ -19,7 +19,7 @@ $router->get('/', function () use ($router) {
 $router->group(["prefix" => "api"], function () use ($router) {
     //Identitas Siswa
     $router->get('showIDSiswa', ['uses' => 'IdentitasSiswaController@showIdentitasSiswa']);
-    $router->post('createIDSiswa', ['uses' => 'IdentitasSiswaController@createIdentitasSis']);
+    $router->post('createIDSiswa', ['uses' => 'IdentitasSiswaController@createIdentitasSiswa']);
 
     //Kelas
     $router->get('showKelas', ['uses' => 'KelasController@showKelas']);
